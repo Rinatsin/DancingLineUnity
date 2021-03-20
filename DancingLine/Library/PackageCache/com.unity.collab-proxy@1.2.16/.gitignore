@@ -1,0 +1,13 @@
+/.npmignore
+/CHANGELOG.md
+/CHANGELOG.md.meta
+/DEPENDENCIES.md
+/DEPENDENCIES.md.meta
+/Editor.meta
+/LICENSE.md
+/LICENSE.md.meta
+/README.md
+/README.md.meta
+/Tests.meta
+/package.json
+/package.json.meta

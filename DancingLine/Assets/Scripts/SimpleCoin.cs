@@ -5,17 +5,17 @@ using System;
 
 public class SimpleCoin : MonoBehaviour
 {
-    [SerializeField] private AudioClip _coinSound;
-    [SerializeField] private AudioSource _audioSource;
+    public AudioClip _coinSound;
+    public AudioSource _audioSource;
 
     public static event Action OnGetCoin;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            _audioSource.PlayOneShot(_coinSound);
             OnGetCoin?.Invoke();
             Destroy(gameObject);
-            _audioSource.PlayOneShot(_coinSound);
         }
     }
 }

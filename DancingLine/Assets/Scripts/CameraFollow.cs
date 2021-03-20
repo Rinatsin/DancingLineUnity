@@ -10,7 +10,6 @@ public class CameraFollow : MonoBehaviour
 
     private float _fixedY;
     private Vector3 _offset;
-    private Vector3 _currentDir;
 
 
     private void Awake()
@@ -19,6 +18,7 @@ public class CameraFollow : MonoBehaviour
         _offset = _initialPosition - _followTarget.position;
         _fixedY = _initialPosition.y;
         Movement.onDirectionChanged += RotateCameraToDir;
+
     }
 
     // Update is called once per frame
